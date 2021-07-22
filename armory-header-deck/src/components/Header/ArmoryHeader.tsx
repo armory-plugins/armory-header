@@ -1,5 +1,4 @@
 import { useCurrentStateAndParams, useSrefActive } from '@uirouter/react';
-import { module } from 'angular';
 import React from 'react';
 import { useRecoilState } from 'recoil';
 
@@ -60,7 +59,7 @@ export const ArmoryHeaderContent = () => {
           {isApplicationView && <Icon name={verticalNavExpanded ? 'menuClose' : 'menu'} size="medium" color="white" />}
         </div>
         <a className="navbar-brand flex-1" href="#">
-          SPINNAKER
+          SPINNAKER test
         </a>
       </div>
       {navExpanded && (
@@ -94,11 +93,3 @@ export class ArmoryHeader extends React.Component<{}, {}> {
     return <ArmoryHeaderContent />;
   }
 }
-
-export const ARMORY_HEADER_MODULE = 'armory.header.v1';
-module(ARMORY_HEADER_MODULE, []).run([
-  'overrideRegistry',
-  function (overrideRegistry: OverrideRegistry) {
-    overrideRegistry.overrideComponent('spinnakerHeader', ArmoryHeader);
-  },
-]);
