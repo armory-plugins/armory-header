@@ -90,6 +90,7 @@ export const ArmoryHeaderContent = () => {
 
 export class ArmoryHeader extends React.Component<{}, {}> {
   public render(): React.ReactElement<ArmoryHeader> {
-    return <ArmoryHeaderContent />;
+    // return <ArmoryHeaderContent />;
+    return <div>this is the header plugin</div>;
   }
 }
