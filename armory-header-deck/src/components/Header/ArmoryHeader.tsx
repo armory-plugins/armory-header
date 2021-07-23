@@ -1,5 +1,5 @@
 import { useCurrentStateAndParams, useSrefActive } from '@uirouter/react';
-import React from 'react';
+import React, { Fragment } from 'react';
 import { useRecoilState } from 'recoil';
 
 import {
@@ -12,6 +12,8 @@ import {
   verticalNavExpandedAtom,
 } from '@spinnaker/core';
 import { Icon } from '@spinnaker/presentation';
+
+import { Banner } from '../Banner/Banner';
 
 import './ArmoryHeader.css';
 
@@ -53,38 +55,43 @@ export const ArmoryHeaderContent = () => {
   );
 
   return (
-    <nav className="container spinnaker-header" role="navigation" aria-label="Main Menu">
-      <div className="navbar-header horizontal middle">
-        <div onClick={toggleNav} className="sp-margin-xl-right navbar-menu-icon">
-          {isApplicationView && <Icon name={verticalNavExpanded ? 'menuClose' : 'menu'} size="medium" color="white" />}
+    <Fragment>
+      <nav className="container spinnaker-header" role="navigation" aria-label="Main Menu">
+        <div className="navbar-header horizontal middle">
+          <div onClick={toggleNav} className="sp-margin-xl-right navbar-menu-icon">
+            {isApplicationView && (
+              <Icon name={verticalNavExpanded ? 'menuClose' : 'menu'} size="medium" color="white" />
+            )}
+          </div>
+          <a className="navbar-brand flex-1" href="#">
+            SPINNAKER test
+          </a>
         </div>
-        <a className="navbar-brand flex-1" href="#">
-          SPINNAKER test
-        </a>
-      </div>
-      {navExpanded && (
-        <div className="nav-container nav-items">
-          <ul className="nav nav-items flex-1 page-nav">
-            <li key="navHome">
-              <a {...searchSref}>Search</a>
-            </li>
-            <li key="navProjects">
-              <a {...projectsSref}>Projects</a>
-            </li>
-            <li key="navApplications">
-              <a {...appsSref}>Applications</a>
-            </li>
-            {SETTINGS.feature.managedPipelineTemplatesV2UI ? mptv2Button : null}
-            {SETTINGS.feature.dinghyEvents ? dinghyEventsButton : null}
-          </ul>
-          <ul className="nav nav-items">
-            <UserMenu />
-            <GlobalSearch />
-            <HelpMenu />
-          </ul>
-        </div>
-      )}
-    </nav>
+        {navExpanded && (
+          <div className="nav-container nav-items">
+            <ul className="nav nav-items flex-1 page-nav">
+              <li key="navHome">
+                <a {...searchSref}>Search</a>
+              </li>
+              <li key="navProjects">
+                <a {...projectsSref}>Projects</a>
+              </li>
+              <li key="navApplications">
+                <a {...appsSref}>Applications</a>
+              </li>
+              {SETTINGS.feature.managedPipelineTemplatesV2UI ? mptv2Button : null}
+              {SETTINGS.feature.dinghyEvents ? dinghyEventsButton : null}
+            </ul>
+            <ul className="nav nav-items">
+              <UserMenu />
+              <GlobalSearch />
+              <HelpMenu />
+            </ul>
+          </div>
+        )}
+      </nav>
+      <Banner />
+    </Fragment>
   );
 };
 
