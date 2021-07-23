@@ -4,7 +4,7 @@ import React, { Fragment, useState } from 'react';
 import { CollapsibleSectionStateCache, GlobalSearch, HelpMenu, SETTINGS, UserMenu } from '@spinnaker/core';
 import { Icon } from '@spinnaker/presentation';
 
-import { Banner } from '../Banner/Banner';
+import { BannerGroup } from '../Banner/BannerGroup';
 
 import './ArmoryHeader.css';
 
@@ -79,7 +79,7 @@ export const ArmoryHeader = () => {
           </div>
         )}
       </nav>
-      <Banner />
+      {<BannerGroup />}
     </Fragment>
   );
 };

@@ -1,0 +1,20 @@
+.alert.show {
+  margin-bottom: 0;
+  opacity: 1;
+}
+
+.alert-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.alert-text {
+  margin: 0;
+}
+
+.alert-close {
+  background-color: transparent;
+  border: 0;
+  color: var(--color-primary);
+}

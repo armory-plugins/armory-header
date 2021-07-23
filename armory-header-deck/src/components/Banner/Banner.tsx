@@ -1,40 +1,29 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Alert from 'react-bootstrap/Alert';
-import { getMessagingContent } from '../../utils/API';
 
-interface BannerContent {
+import './Banner.css';
+
+export interface BannerContent {
   message: string;
   style: string;
 }
 
-export const Banner = () => {
-  const [show, setShow] = useState<boolean>(false);
-  const [contents, setContents] = useState<BannerContent[] | undefined>(undefined);
-  const handleClick = () => {
-    setShow(false);
+export const Banner = ({ message, style }: BannerContent) => {
+  const [show, setShow] = useState<boolean>(true);
+  const setMessage = () => {
+    return { __html: `${message}` };
   };
-
-  useEffect(() => {
-    getMessagingContent().then((response) => {
-      if (response.length > 1) {
-        setShow(true);
-        setContents(response);
-      }
-    });
-  }, []);
 
   if (show) {
     return (
-      <Fragment>
-        {contents.map((content, id) => (
-          <Alert key={id} variant={content.style} onClose={() => setShow(false)} dismissible>
-            <div className="alert-container">
-              <p className="alert-text">{content.message}</p>
-              <button onClick={handleClick}>Dismiss</button>
-            </div>
-          </Alert>
-        ))}
-      </Fragment>
+      <Alert variant={style}>
+        <div className="alert-container">
+          <p className="alert-text" dangerouslySetInnerHTML={setMessage()} />
+          <button className="alert-close" onClick={() => setShow(false)}>
+            Dismiss
+          </button>
+        </div>
+      </Alert>
     );
   }
 
