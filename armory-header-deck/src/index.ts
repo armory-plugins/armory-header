@@ -3,6 +3,6 @@ import { ArmoryHeader } from './components/Header/ArmoryHeader';
 
 export const plugin: IDeckPlugin = {
   initialize: () => {
-    overrideRegistrationQueue.register(ArmoryHeader, 'spinnakerHeader');
+    overrideRegistrationQueue.register(ArmoryHeader, 'armoryHeader');
   },
 };

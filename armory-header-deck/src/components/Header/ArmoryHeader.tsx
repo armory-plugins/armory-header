@@ -1,28 +1,19 @@
 import { useCurrentStateAndParams, useSrefActive } from '@uirouter/react';
-import React, { Fragment } from 'react';
-import { useRecoilState } from 'recoil';
+import React, { Fragment, useState } from 'react';
 
-import {
-  CollapsibleSectionStateCache,
-  GlobalSearch,
-  HelpMenu,
-  NgReact,
-  OverrideRegistry,
-  SETTINGS,
-  verticalNavExpandedAtom,
-} from '@spinnaker/core';
+import { CollapsibleSectionStateCache, GlobalSearch, HelpMenu, SETTINGS, UserMenu } from '@spinnaker/core';
 import { Icon } from '@spinnaker/presentation';
 
 import { Banner } from '../Banner/Banner';
 
 import './ArmoryHeader.css';
 
-export const ArmoryHeaderContent = () => {
+export const ArmoryHeader = () => {
   const { state: currentState } = useCurrentStateAndParams();
   const isApplicationView =
     currentState.name.includes('project.application.') || currentState.name.includes('applications.application.');
 
-  const [verticalNavExpanded, setVerticalNavExpanded] = useRecoilState(verticalNavExpandedAtom);
+  const [verticalNavExpanded, setVerticalNavExpanded] = useState<boolean>(false);
   const toggleNav = () => {
     setVerticalNavExpanded(!verticalNavExpanded);
     CollapsibleSectionStateCache.setExpanded('verticalNav', !verticalNavExpanded);
@@ -34,8 +25,6 @@ export const ArmoryHeaderContent = () => {
     return isPhone.toLowerCase() === 'true';
   };
   const [navExpanded] = React.useState(!isDevicePhoneOrSmaller());
-
-  const { UserMenu } = NgReact;
   const searchSref = useSrefActive('home.infrastructure', null, 'active');
   const projectsSref = useSrefActive('home.projects', null, 'active');
   const appsSref = useSrefActive('home.applications', null, 'active');
@@ -79,8 +68,8 @@ export const ArmoryHeaderContent = () => {
               <li key="navApplications">
                 <a {...appsSref}>Applications</a>
               </li>
-              {SETTINGS.feature.managedPipelineTemplatesV2UI ? mptv2Button : null}
-              {SETTINGS.feature.dinghyEvents ? dinghyEventsButton : null}
+              {SETTINGS.feature.managedPipelineTemplatesV2UI && mptv2Button}
+              {SETTINGS.feature.dinghyEvents && dinghyEventsButton}
             </ul>
             <ul className="nav nav-items">
               <UserMenu />
@@ -94,9 +83,3 @@ export const ArmoryHeaderContent = () => {
     </Fragment>
   );
 };
-
-export class ArmoryHeader extends React.Component<{}, {}> {
-  public render(): React.ReactElement<ArmoryHeader> {
-    return <ArmoryHeaderContent />;
-  }
-}

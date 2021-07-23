@@ -15,15 +15,15 @@
     "prepare": "husky-install"
   },
   "dependencies": {
-    "@spinnaker/core": "0.0.574",
-    "@spinnaker/pluginsdk": "0.0.32",
+    "@spinnaker/core": "0.0.619",
+    "@spinnaker/pluginsdk": "0.0.38",
     "@spinnaker/pluginsdk-peerdeps": "0.0.16",
     "@spinnaker/presentation": "0.0.5",
     "@uirouter/core": "6.0.4",
     "@uirouter/react": "1.0.2",
+    "angular": "1.6.10",
     "bootstrap": "5.0.2",
     "lodash-es": "4.17.15",
-    "angular": "1.6.10",
     "prop-types": "15.6.1",
     "react": "16.14.0",
     "react-bootstrap": "^2.0.0-beta.4",
