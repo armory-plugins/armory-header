@@ -53,7 +53,7 @@ export const ArmoryHeader = () => {
             )}
           </div>
           <a className="navbar-brand flex-1" href="#">
-            SPINNAKER test
+            SPINNAKER
           </a>
         </div>
         {navExpanded && (
