@@ -17,11 +17,11 @@ const addChurnZeroScript = () => {
   script.text = scriptContent;
   document.getElementsByTagName('head')[0].appendChild(script);
 
-  return new Promise<void>((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     if (ChurnZero) {
-      resolve();
+      resolve({ status: 'Success' });
     } else {
-      reject();
+      reject({ status: 'Error' });
     }
   });
 };

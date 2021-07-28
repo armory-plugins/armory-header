@@ -53,8 +53,10 @@ export const ArmoryHeader = () => {
   );
 
   useEffect(() => {
-    addChurnZeroScript().then((response) => {
-      initializeChurnZero(AuthenticationService.getAuthenticatedUser().name);
+    addChurnZeroScript().then((response: any) => {
+      if (response.status === 'Success') {
+        initializeChurnZero(AuthenticationService.getAuthenticatedUser().name);
+      }
     });
   }, []);
 
