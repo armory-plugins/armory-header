@@ -1,10 +1,6 @@
-import { AuthenticationService } from '@spinnaker/core';
-
 import { getFeatureSpecificContent } from './API';
 
 declare const ChurnZero: any;
-
-const REACT_APP_CHURN_ZERO_APP_KEY = '1!td5981gTU-miSiqY-JAL5pQPa8IgF4xieIl68AmtsYkt7CB';
 
 const addChurnZeroScript = () => {
   const script = document.createElement('script');
