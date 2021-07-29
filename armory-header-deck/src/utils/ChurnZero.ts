@@ -27,12 +27,12 @@ const addChurnZeroScript = () => {
 };
 
 const initializeChurnZero = (contactExternalId: string) => {
-  if (ChurnZero) {
-    getFeatureSpecificContent('churnZero').then((response) => {
+  getFeatureSpecificContent('churnZero').then((response) => {
+    if (ChurnZero && response) {
       ChurnZero.push(['setAppKey', response.appKey]);
       ChurnZero.push(['setContact', response.accountExternalId, contactExternalId]);
-    });
-  }
+    }
+  });
 };
 
 export { addChurnZeroScript, initializeChurnZero };
