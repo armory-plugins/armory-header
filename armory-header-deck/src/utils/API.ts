@@ -1,12 +1,19 @@
 import { REST } from '@spinnaker/core';
 
-const ENDPOINT = '/armory/messaging/api/v1/poll';
+const URL = '/armory/messaging/api/v1';
 
 const getMessagingContent = () => {
-  return REST(ENDPOINT)
+  return REST(`${URL}/poll`)
     .get()
     .then((response) => response)
     .catch((error) => error);
 };
 
-export { getMessagingContent };
+const getFeatureSpecificContent = (feature: string) => {
+  return REST(`${URL}/feature-specific`)
+    .get()
+    .then((response) => response[feature])
+    .catch((error) => error);
+};
+
+export { getMessagingContent, getFeatureSpecificContent };

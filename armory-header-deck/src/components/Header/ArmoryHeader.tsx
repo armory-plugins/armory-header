@@ -1,10 +1,19 @@
 import { useCurrentStateAndParams, useSrefActive } from '@uirouter/react';
 import React, { Fragment, useState } from 'react';
+import { useEffect } from 'react';
 
-import { CollapsibleSectionStateCache, GlobalSearch, HelpMenu, SETTINGS, UserMenu } from '@spinnaker/core';
+import {
+  AuthenticationService,
+  CollapsibleSectionStateCache,
+  GlobalSearch,
+  HelpMenu,
+  SETTINGS,
+  UserMenu,
+} from '@spinnaker/core';
 import { Icon } from '@spinnaker/presentation';
 
 import { BannerGroup } from '../Banner/BannerGroup';
+import { addChurnZeroScript, initializeChurnZero } from '../../utils/ChurnZero';
 
 import './ArmoryHeader.css';
 
@@ -42,6 +51,14 @@ export const ArmoryHeader = () => {
       <a {...dinghyEventsSref}>Dinghy Events</a>
     </li>
   );
+
+  useEffect(() => {
+    addChurnZeroScript().then((response: any) => {
+      if (response.status === 'Success') {
+        initializeChurnZero(AuthenticationService.getAuthenticatedUser().name);
+      }
+    });
+  }, []);
 
   return (
     <Fragment>
