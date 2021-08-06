@@ -8,7 +8,7 @@ export const BannerGroup = () => {
 
   useEffect(() => {
     getMessagingContent().then((response) => {
-      if (response.length > 1) {
+      if (response.length > 0) {
         setBanners(response);
       }
     });
