@@ -1112,10 +1112,10 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
-"@spinnaker/core@0.0.620":
-  version "0.0.620"
-  resolved "https://registry.yarnpkg.com/@spinnaker/core/-/core-0.0.620.tgz#7fd2e28955c67213afba27708ed7c93d0c1379b0"
-  integrity sha512-5zfZcUSc1GdDycTN4HopE08Wew+VzqDZQ6Ktp+3xvzbdM0nOcuaOzYB5DVWnQ0tbPwQ/k81Sy+zWj15/tc94Bg==
+"@spinnaker/core@2021.0.0-20210927173853.release-1.27.x":
+  version "2021.0.0-20210927173853.release-1.27.x"
+  resolved "https://armory.jfrog.io/artifactory/api/npm/npm-all/@spinnaker/core/-/core-2021.0.0-20210927173853.release-1.27.x.tgz#0249151b703dcd98f80440330bd39b08625e7fef"
+  integrity sha1-AkkVG3A9zZj4BEAzC9ObCGJef+8=
   dependencies:
     "@apollo/client" "3.3.14"
     "@fortawesome/fontawesome-free" "5.5.0"
@@ -1124,7 +1124,7 @@
     "@spinnaker/styleguide" "1.0.26"
     "@uirouter/angularjs" "1.0.26"
     "@uirouter/core" "6.0.8"
-    "@uirouter/react" "1.0.3"
+    "@uirouter/react" "1.0.7"
     "@uirouter/react-hybrid" "1.0.2"
     "@uirouter/rx" "0.6.5"
     "@uirouter/visualizer" "7.2.1"
@@ -1153,7 +1153,6 @@
     human-readable-ids "1.0.4"
     jquery "3.5.1"
     jquery-textcomplete "1.6.1"
-    jquery-ui "1.12.0"
     js-worker-search "npm:js-worker-search-uuid-fix@^1.4.2"
     js-yaml "3.13.1"
     lodash "4.17.21"
@@ -1603,6 +1602,11 @@
   resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-6.0.5.tgz#60f13fd530fc75daa283e2bece944516559d066b"
   integrity sha512-WN2HyELsxvqLaCMYCWojGW/QLRBgFBfwyERp5jC3Vn1njo/FLI5hplVqWMu6LIGp6Hpz3pbdtSaiFb1iY7iTVw==
 
+"@uirouter/core@6.0.7":
+  version "6.0.7"
+  resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-6.0.7.tgz#a66743dceb13a56d8908474ff891d63e5d5a2b01"
+  integrity sha512-KUTJxL+6q0PiBnFx4/Z+Hsyg0pSGiaW5yZQeJmUxknecjpTbnXkLU8H2EqRn9N2B+qDRa7Jg8RcgeNDPY72O1w==
+
 "@uirouter/core@6.0.8":
   version "6.0.8"
   resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-6.0.8.tgz#a1e919a4743be729751aafc4ce353d0dc0ffd26c"
@@ -1633,6 +1637,15 @@
   dependencies:
     "@uirouter/core" "6.0.5"
     classnames "^2.2.5"
+    prop-types "^15.6.1"
+
+"@uirouter/react@1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@uirouter/react/-/react-1.0.7.tgz#2ddc3996a011b77f4579a72eebfb3243bf04c909"
+  integrity sha512-CRCEk6fh/Fy/iAUkctPWpgrEC4DR1D/hnrpqyGshDcAuCfRVSYluRPkurzV74p1LG1pksCVlThH/0aJK9+G/MQ==
+  dependencies:
+    "@uirouter/core" "6.0.7"
+    classnames "^2.3.1"
     prop-types "^15.6.1"
 
 "@uirouter/rx@0.6.5":
@@ -4244,11 +4257,6 @@ jquery-textcomplete@1.6.1:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/jquery-textcomplete/-/jquery-textcomplete-1.6.1.tgz#ca5ddecf5ea5370bb400380dc79785b35afbad17"
   integrity sha1-yl3ez16lNwu0ADgNx5eFs1r7rRc=
-
-jquery-ui@1.12.0:
-  version "1.12.0"
-  resolved "https://registry.yarnpkg.com/jquery-ui/-/jquery-ui-1.12.0.tgz#59c6037a2d9c57e9a2521a9b7a497116d41b4246"
-  integrity sha1-WcYDei2cV+miUhqbeklxFtQbQkY=
 
 jquery@3.5.1:
   version "3.5.1"
