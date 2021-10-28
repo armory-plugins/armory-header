@@ -20,6 +20,10 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
+      - name: NPM Auth
+        run: |
+          echo '@spinnaker:registry=https://armory.jfrog.io/artifactory/api/npm/npm-all/' > .npmrc
+          curl -u${ARTIFACTORY_USER}:${ARTIFACTORY_PASSWORD} https://armory.jfrog.io/artifactory/api/npm/auth >> .npmrc
       - name: run tests
         run: ./gradlew test
       - name: build
