@@ -11,8 +11,10 @@ jobs:
     name: Build Plugin
     runs-on: ubuntu-latest
     env:
-      ORG_GRADLE_PROJECT_artifactory_user: '${{secrets.NEW_ARTIFACTORY_USER}}'
-      ORG_GRADLE_PROJECT_artifactory_password: '${{secrets.NEW_ARTIFACTORY_TOKEN}}'
+      ORG_GRADLE_PROJECT_artifactory_user: '${{secrets.ARTIFACTORY_USER}}'
+      ORG_GRADLE_PROJECT_artifactory_password: '${{secrets.ARTIFACTORY_TOKEN}}'
+      NEW_ARTIFACTORY_USER: '${{secrets.NEW_ARTIFACTORY_USER}}'
+      NEW_ARTIFACTORY_TOKEN: '${{secrets.NEW_ARTIFACTORY_TOKEN}}'
     steps:
       - name: checkout code
         uses: actions/checkout@v2

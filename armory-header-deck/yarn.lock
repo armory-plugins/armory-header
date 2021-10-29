@@ -1237,8 +1237,8 @@
 
 "@spinnaker/presentation@^0.0.9":
   version "0.0.9"
-  resolved "https://registry.yarnpkg.com/@spinnaker/presentation/-/presentation-0.0.9.tgz#e3dc1bf135d13627bc8b38475b4998dd9969fb7f"
-  integrity sha512-K1jIjxgosB4PGLOUu8Wadk0sNaMlEJ7MS/UoCp+T4PBPFAsqH6x0mMJniQKNU5EiXn6hKX7yVt9tJx/ayuiUWw==
+  resolved "https://armory.jfrog.io/artifactory/api/npm/npm-all/@spinnaker/presentation/-/presentation-0.0.9.tgz#e3dc1bf135d13627bc8b38475b4998dd9969fb7f"
+  integrity sha1-49wb8TXRNie8izhHW0mY3Zlp+38=
   dependencies:
     formik "^1.4.1"
 
@@ -1275,8 +1275,8 @@
 
 "@spinnaker/styleguide@1.0.26", "@spinnaker/styleguide@^1.0.24":
   version "1.0.26"
-  resolved "https://registry.yarnpkg.com/@spinnaker/styleguide/-/styleguide-1.0.26.tgz#a0780c8491406881cc4088b379c06618ca446136"
-  integrity sha512-iFUv+qKwiqFYAXi2YRhoyblS4Re+q66ED+slYXMoQzrqLyrp4TV4LqxDgsWdsPi4LbEWOn8JjHbV20KcNFjE4w==
+  resolved "https://armory.jfrog.io/artifactory/api/npm/npm-all/@spinnaker/styleguide/-/styleguide-1.0.26.tgz#a0780c8491406881cc4088b379c06618ca446136"
+  integrity sha1-oHgMhJFAaIHMQIizecBmGMpEYTY=
 
 "@svgr/babel-plugin-add-jsx-attribute@^5.4.0":
   version "5.4.0"
