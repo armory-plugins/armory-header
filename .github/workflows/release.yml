@@ -9,6 +9,9 @@ jobs:
   build:
     name: Release Plugin
     runs-on: ubuntu-latest
+    env:
+      ARTIFACTORY_USER: '${{secrets.ARTIFACTORY_USER}}'
+      ARTIFACTORY_PASSWORD: '${{secrets.ARTIFACTORY_PASSWORD}}'
     steps:
       - name: checkout code
         uses: actions/checkout@v2
@@ -17,6 +20,11 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
+
+      - name: NPM Auth
+        run: |
+          echo '@spinnaker:registry=https://armory.jfrog.io/artifactory/api/npm/npm-all/' > armory-header-deck/.npmrc
+          curl -u${ARTIFACTORY_USER}:${ARTIFACTORY_PASSWORD} https://armory.jfrog.io/artifactory/api/npm/auth >> armory-header-deck/.npmrc
 
       - name: run tests
         run: ./gradlew test
