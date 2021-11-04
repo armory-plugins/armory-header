@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@spinnaker/core": "2021.0.0-20210927173853.release-1.27.x",
-    "@spinnaker/pluginsdk": "0.0.38",
+    "@spinnaker/pluginsdk": "0.2.0",
     "@spinnaker/pluginsdk-peerdeps": "0.0.16",
     "@spinnaker/presentation": "0.0.5",
     "@types/react-dom": "17.0.9",
