@@ -51,3 +51,6 @@ String normalizedVersion() {
   }
 }
 
+task version() {
+  println(version)
+}
