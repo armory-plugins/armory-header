@@ -1250,10 +1250,10 @@
   dependencies:
     lodash "^4.17.20"
 
-"@spinnaker/eslint-plugin@^3.0.0":
-  version "3.0.0"
-  resolved "https://armory.jfrog.io/artifactory/api/npm/npm-all/@spinnaker/eslint-plugin/-/eslint-plugin-3.0.0.tgz#6e8e4e848e4e1cdb9ce1680a5a84959bba6d1849"
-  integrity sha1-bo5OhI5OHNuc4WgKWoSVm7ptGEk=
+"@spinnaker/eslint-plugin@^3.0.1":
+  version "3.0.1"
+  resolved "https://armory.jfrog.io/artifactory/api/npm/npm-all/@spinnaker/eslint-plugin/-/eslint-plugin-3.0.1.tgz#47f62a618b2d7880e4fa000c03fa6ab39835eb16"
+  integrity sha512-Iz9aUJxrNXkHYNzYJZ3QdDXblPpyHOEyCMCx7krTi/llGuFN+KM5YBMqRHXiSl8P0XJVUoE6S4OKfPQndoXCmg==
   dependencies:
     lodash "^4.17.20"
     ts-node "*"
@@ -1263,17 +1263,17 @@
   resolved "https://registry.yarnpkg.com/@spinnaker/mocks/-/mocks-1.0.7.tgz#3e30fde4d691b310910e7fa5201c7424609042c0"
   integrity sha512-WXoNtZoFZFNDTrckCbbTShxoRN088IN+awWweNNv89EU4GsMX8HnnG/9J6N9rAt0R3ZgzhJmaNG06/JHHBzxEw==
 
-"@spinnaker/pluginsdk-peerdeps@0.0.16":
-  version "0.0.16"
-  resolved "https://registry.yarnpkg.com/@spinnaker/pluginsdk-peerdeps/-/pluginsdk-peerdeps-0.0.16.tgz#ee03a22678f2734d7eadcde7c1d55f3a6fe85835"
-  integrity sha512-eQymxeouIoEiAJjJ6Cyi7HBpInKa332NAUtuGUcsJTFDOxsi++sEqFMXBncausUGUTYY9GB4NzAQZA+a/1ClWQ==
+"@spinnaker/pluginsdk-peerdeps@0.0.19":
+  version "0.0.19"
+  resolved "https://armory.jfrog.io/artifactory/api/npm/npm-all/@spinnaker/pluginsdk-peerdeps/-/pluginsdk-peerdeps-0.0.19.tgz#9a2e9198d11584e9627991100fa8014da7c4969f"
+  integrity sha512-4t4MDsST6d1wskHtBoCRyc6+YYlSPilSG8qQcFHLQQAXPFbCqE8eE/6gkwnFzUlUrSLWQfsVl794sE+6m4e5/Q==
 
-"@spinnaker/pluginsdk@0.2.0":
-  version "0.2.0"
-  resolved "https://armory.jfrog.io/artifactory/api/npm/npm-all/@spinnaker/pluginsdk/-/pluginsdk-0.2.0.tgz#205b3032e5dbb8782514db9a17fa059f2fdc1283"
-  integrity sha1-IFswMuXbuHglFNuaF/oFny/cEoM=
+"@spinnaker/pluginsdk@0.2.3":
+  version "0.2.3"
+  resolved "https://armory.jfrog.io/artifactory/api/npm/npm-all/@spinnaker/pluginsdk/-/pluginsdk-0.2.3.tgz#5c88f3d99052161b25116e82f93818a2cff323ad"
+  integrity sha512-ujW4mCz3yueDhiBiGTAqJdNXCggxIh2h6C1Qfuv/+1rDV6HQj5VDPTEabzUHWGVnKxJXIMHVUBqU0xC7oppWEA==
   dependencies:
-    "@spinnaker/scripts" "^0.2.2"
+    "@spinnaker/scripts" "^0.2.5"
     check-peer-dependencies "^4.0.0"
     chokidar "^3.5.1"
     express "^4.17.1"
@@ -1301,10 +1301,10 @@
   dependencies:
     formik "^1.4.1"
 
-"@spinnaker/scripts@^0.2.2":
-  version "0.2.2"
-  resolved "https://armory.jfrog.io/artifactory/api/npm/npm-all/@spinnaker/scripts/-/scripts-0.2.2.tgz#0ee974b5f69067bfed10119e3ac3e42f0cecc149"
-  integrity sha1-Dul0tfaQZ7/tEBGeOsPkLwzswUk=
+"@spinnaker/scripts@^0.2.5":
+  version "0.2.5"
+  resolved "https://armory.jfrog.io/artifactory/api/npm/npm-all/@spinnaker/scripts/-/scripts-0.2.5.tgz#5281a982133dbf934eadfe040134717dc5daba94"
+  integrity sha512-NfzcRwcLf5Bh4LjZSZML8v/7LPJNbhZ9OPG/wx4PlXFGiixzHhAxeqh1XXo0CoK475fSuZ9Y2slj51OLwQRJTQ==
   dependencies:
     "@rollup/plugin-commonjs" "^17.0.0"
     "@rollup/plugin-json" "4.1.0"
@@ -1312,8 +1312,8 @@
     "@rollup/plugin-replace" "2.4.2"
     "@rollup/plugin-typescript" "^8.1.0"
     "@rollup/plugin-url" "^6.0.0"
-    "@spinnaker/eslint-plugin" "^3.0.0"
-    "@spinnaker/styleguide" "^1.0.24"
+    "@spinnaker/eslint-plugin" "^3.0.1"
+    "@spinnaker/styleguide" "^2.0.0"
     "@svgr/rollup" "^5.5.0"
     autoprefixer "^7.1.2"
     chalk "^4.1.1"
@@ -1323,7 +1323,7 @@
     postcss-colorfix "0.0.5"
     postcss-url "9.0.0"
     rollup "^2.35.1"
-    rollup-plugin-esbuild "^4.5.0"
+    rollup-plugin-esbuild "^4.8.2"
     rollup-plugin-external-globals "0.6.1"
     rollup-plugin-less "1.1.3"
     rollup-plugin-postcss "3.1.8"
@@ -1337,10 +1337,10 @@
   resolved "https://armory.jfrog.io/artifactory/api/npm/npm-all/@spinnaker/styleguide/-/styleguide-1.0.26.tgz#a0780c8491406881cc4088b379c06618ca446136"
   integrity sha1-oHgMhJFAaIHMQIizecBmGMpEYTY=
 
-"@spinnaker/styleguide@^1.0.24":
-  version "1.0.28"
-  resolved "https://armory.jfrog.io/artifactory/api/npm/npm-all/@spinnaker/styleguide/-/styleguide-1.0.28.tgz#679a153cdc3f1ed0a72d059ebc6142ca9fdf5679"
-  integrity sha1-Z5oVPNw/HtCnLQWevGFCyp/fVnk=
+"@spinnaker/styleguide@^2.0.0":
+  version "2.0.0"
+  resolved "https://armory.jfrog.io/artifactory/api/npm/npm-all/@spinnaker/styleguide/-/styleguide-2.0.0.tgz#25c2e1cd8245bc6ecde49ecae286bd0e5bdaa44e"
+  integrity sha512-27S/ZCxe7cGfCVJiggqgESRdGwXcQtMLyThfxuSsrbL6iW3qCXbSZQu64K3y6FUyn47drrYRwMExUsX5GHF3VQ==
 
 "@svgr/babel-plugin-add-jsx-attribute@^5.4.0":
   version "5.4.0"
@@ -2919,6 +2919,13 @@ debug@^4.1.0, debug@^4.2.0:
   dependencies:
     ms "2.1.2"
 
+debug@^4.3.3:
+  version "4.3.4"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.4.tgz#1319f6579357f2338d3337d2cdd4914bb5dcc865"
+  integrity sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==
+  dependencies:
+    ms "2.1.2"
+
 dedent@^0.7.0:
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/dedent/-/dedent-0.7.0.tgz#2495ddbaf6eb874abb0e1be9df22d2e5a544326c"
@@ -3251,6 +3258,11 @@ es-array-method-boxes-properly@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/es-array-method-boxes-properly/-/es-array-method-boxes-properly-1.0.0.tgz#873f3e84418de4ee19c5be752990b2e44718d09e"
   integrity sha512-wd6JXUmyHmt8T5a2xreUwKcGPq6f1f+WwIJkijUqiGcJz1qqnZgP6XIK+QyIWU5lT7imeNxUll48bziG+TSYcA==
+
+es-module-lexer@^0.9.3:
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/es-module-lexer/-/es-module-lexer-0.9.3.tgz#6f13db00cc38417137daf74366f535c8eb438f19"
+  integrity sha512-1HQ2M2sPtxwnvOvT1ZClHyQDiggdNjURWpY2we6aMKCQiUVxTmVs2UYPLIrD84sS+kMdUwfBSylbJPwNnBrnHQ==
 
 es-to-primitive@^1.2.1:
   version "1.2.1"
@@ -6480,12 +6492,14 @@ rimraf@^2.2.8:
   dependencies:
     glob "^7.1.3"
 
-rollup-plugin-esbuild@^4.5.0:
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-esbuild/-/rollup-plugin-esbuild-4.6.0.tgz#293b0c8d2e64b753918f3023c1fb87dc4acdef3b"
-  integrity sha512-fjihkrOCy7qeNDd1VmtWw39UA4b6a96NVrsuK6eg1SArnWoS3G4xLoW7liF0oRQU7+ONPr/Gjxz9cv+WLRhaGA==
+rollup-plugin-esbuild@^4.8.2:
+  version "4.9.1"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-esbuild/-/rollup-plugin-esbuild-4.9.1.tgz#369d137e2b1542c8ee459495fd4f10de812666aa"
+  integrity sha512-qn/x7Wz9p3Xnva99qcb+nopH0d2VJwVnsxJTGEg+Sh2Z3tqQl33MhOwzekVo1YTKgv+yAmosjcBRJygMfGrtLw==
   dependencies:
     "@rollup/pluginutils" "^4.1.1"
+    debug "^4.3.3"
+    es-module-lexer "^0.9.3"
     joycon "^3.0.1"
     jsonc-parser "^3.0.0"
 
