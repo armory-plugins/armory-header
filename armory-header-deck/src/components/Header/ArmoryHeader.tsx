@@ -22,7 +22,7 @@ export const ArmoryHeader = () => {
   const isApplicationView =
     currentState.name.includes('project.application.') || currentState.name.includes('applications.application.');
 
-  const [verticalNavExpanded, setVerticalNavExpanded] = useState<boolean>(false);
+  const [verticalNavExpanded, setVerticalNavExpanded] = useState<boolean>(!CollapsibleSectionStateCache.isSet('verticalNav') || CollapsibleSectionStateCache.isExpanded('verticalNav'));
   const toggleNav = () => {
     setVerticalNavExpanded(!verticalNavExpanded);
     CollapsibleSectionStateCache.setExpanded('verticalNav', !verticalNavExpanded);
