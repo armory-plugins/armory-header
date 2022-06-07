@@ -16,7 +16,7 @@
     "modules": "echo modules"
   },
   "dependencies": {
-    "@spinnaker/core": "0.19.4",
+    "@spinnaker/core": "2022.0.0-20220524093036.release-1.28.x",
     "@spinnaker/pluginsdk": "0.2.3",
     "@spinnaker/pluginsdk-peerdeps": "0.0.19",
     "@spinnaker/presentation": "0.1.0",
