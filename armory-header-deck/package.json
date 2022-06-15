@@ -15,7 +15,7 @@
     "prepare": "husky-install"
   },
   "dependencies": {
-    "@spinnaker/core": "2021.0.0-20210927173853.release-1.27.x",
+    "@spinnaker/core": "2022.0.0-20220614170036.release-1.27.x",
     "@spinnaker/pluginsdk": "0.2.0",
     "@spinnaker/pluginsdk-peerdeps": "0.0.16",
     "@spinnaker/presentation": "0.0.5",
@@ -29,7 +29,7 @@
     "react": "16.14.0",
     "react-bootstrap": "^2.0.0-beta.4",
     "react-dom": "16.14.0",
-    "recoil": "^0.0.10",
+    "recoil": "0.7.2",
     "rxjs": "6.6.7"
   },
   "devDependencies": {
