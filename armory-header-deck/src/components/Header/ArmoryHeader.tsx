@@ -13,6 +13,7 @@ import {
 import { Icon } from '@spinnaker/presentation';
 
 import { BannerGroup } from '../Banner/BannerGroup';
+import { QuickSpinBanner } from '../QuickSpinBanner/QuickSpinBanner';
 import { addChurnZeroScript, initializeChurnZero } from '../../utils/ChurnZero';
 
 import './ArmoryHeader.css';
@@ -22,7 +23,9 @@ export const ArmoryHeader = () => {
   const isApplicationView =
     currentState.name.includes('project.application.') || currentState.name.includes('applications.application.');
 
-  const [verticalNavExpanded, setVerticalNavExpanded] = useState<boolean>(!CollapsibleSectionStateCache.isSet('verticalNav') || CollapsibleSectionStateCache.isExpanded('verticalNav'));
+  const [verticalNavExpanded, setVerticalNavExpanded] = useState<boolean>(
+    !CollapsibleSectionStateCache.isSet('verticalNav') || CollapsibleSectionStateCache.isExpanded('verticalNav'),
+  );
   const toggleNav = () => {
     setVerticalNavExpanded(!verticalNavExpanded);
     CollapsibleSectionStateCache.setExpanded('verticalNav', !verticalNavExpanded);
@@ -96,7 +99,8 @@ export const ArmoryHeader = () => {
           </div>
         )}
       </nav>
-      {<BannerGroup />}
+      {<QuickSpinBanner />}
+      {!SETTINGS.feature.quickSpinEnabled && <BannerGroup />}
     </Fragment>
   );
 };

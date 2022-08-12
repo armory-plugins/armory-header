@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react';
 
-import { Banner, BannerContent } from './Banner';
+import type { BannerContent } from './Banner';
+import { Banner } from './Banner';
 import { getMessagingContent } from '../../utils/API';
 
 export const BannerGroup = () => {
