@@ -12,9 +12,16 @@ export const QuickSpinBanner = () => {
 
   return (
     <Fragment>
-      <Alert color="info">
+      <Alert variant="warning">
         <p className="text-center">
-          <a href="https://www.armory.io/demo-request/">Contact Armory for help or to book a demo.</a>
+          For testing purposes only. Please{' '}
+          <a href="https://www.armory.io/contact-us/" target="_blank" rel="noopener noreferrer">
+            contact
+          </a>{' '}
+          Armory with questions or to book a{' '}
+          <a href="https://www.armory.io/demo-request/" target="_blank" rel="noopener noreferrer">
+            demo.
+          </a>
         </p>
       </Alert>
     </Fragment>
