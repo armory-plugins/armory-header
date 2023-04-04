@@ -10,7 +10,7 @@ jobs:
   publish_images:
     runs-on: ubuntu-latest
     env:
-      GRADLE_ARGS: -Partifactory_user=${{secrets.ARTIFACTORY_USER}} -Partifactory_password=${{secrets.ARTIFACTORY_TOKEN}}
+      GRADLE_ARGS: -Partifactory_user=${{secrets.ARTIFACTORY_USER}} -Partifactory_password=${{secrets.ARTIFACTORY_PASSWORD}}
     steps:
       - name: checkout code
         uses: actions/checkout@v2
