@@ -1,11 +1,12 @@
-.alert {
+.quick-spin-alert {
   margin-bottom: 1px;
   height: 30px;
   line-height: 30px;
   padding: 0 15px;
 }
 
-.notice-text {
+.alert-container {
   text-align: center;
+  justify-content: center !important;
   margin: 0;
 }
