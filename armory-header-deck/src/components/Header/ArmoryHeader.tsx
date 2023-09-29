@@ -12,6 +12,7 @@ import {
 } from '@spinnaker/core';
 import { Icon } from '@spinnaker/presentation';
 
+import { AtipoGlobalBanner } from '../AtipoBanner/AtipoGlobalBanner';
 import { BannerGroup } from '../Banner/BannerGroup';
 import { QuickSpinBanner } from '../QuickSpinBanner/QuickSpinBanner';
 import { addChurnZeroScript, initializeChurnZero } from '../../utils/ChurnZero';
@@ -100,7 +101,8 @@ export const ArmoryHeader = () => {
         )}
       </nav>
       {<QuickSpinBanner />}
-      {!SETTINGS.feature.quickSpinEnabled && <BannerGroup />}
+      {!SETTINGS.feature.quickSpinEnabled && !SETTINGS.feature.atipoGlobalBanner && <BannerGroup />}
+      {<AtipoGlobalBanner />}
     </Fragment>
   );
 };
