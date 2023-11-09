@@ -2,21 +2,16 @@ import { useCurrentStateAndParams, useSrefActive } from '@uirouter/react';
 import React, { Fragment, useState } from 'react';
 import { useEffect } from 'react';
 
-import {
-  AuthenticationService,
-  CollapsibleSectionStateCache,
-  GlobalSearch,
-  SETTINGS,
-  UserMenu
-} from '@spinnaker/core';
+import { AuthenticationService, CollapsibleSectionStateCache, GlobalSearch, SETTINGS, UserMenu } from '@spinnaker/core';
 import { Icon } from '@spinnaker/presentation';
 
+import { AtipoGlobalBanner } from '../AtipoBanner/AtipoGlobalBanner';
 import { BannerGroup } from '../Banner/BannerGroup';
 import { QuickSpinBanner } from '../QuickSpinBanner/QuickSpinBanner';
+import { HelpMenu } from '../help/HelpMenu';
 import { addChurnZeroScript, initializeChurnZero } from '../../utils/ChurnZero';
 
 import './ArmoryHeader.css';
-import {HelpMenu} from "../help/HelpMenu";
 
 export const ArmoryHeader = () => {
   const { state: currentState } = useCurrentStateAndParams();
@@ -100,7 +95,8 @@ export const ArmoryHeader = () => {
         )}
       </nav>
       {<QuickSpinBanner />}
-      {!SETTINGS.feature.quickSpinEnabled && <BannerGroup />}
+      {!SETTINGS.feature.quickSpinEnabled && !SETTINGS.feature.atipoGlobalBanner && <BannerGroup />}
+      {<AtipoGlobalBanner />}
     </Fragment>
   );
 };
