@@ -1313,15 +1313,15 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
-"@spinnaker/core@0.23.0":
-  version "0.23.0"
-  resolved "https://armory.jfrog.io/artifactory/api/npm/npm-all/@spinnaker/core/-/core-0.23.0.tgz#71241581df56c4afb6db63e601f08400326fd6e4"
-  integrity sha512-GuBTn/V55drQcwxSnAPD56PGCznLCAg/RHkkwum9Bc3xzgqhvje4cpQYBRy1tKdyAEheykZlG9Xw6k0X9TZBYw==
+"@spinnaker/core@0.24.1":
+  version "0.24.1"
+  resolved "https://armory.jfrog.io/artifactory/api/npm/npm-all/@spinnaker/core/-/core-0.24.1.tgz#29c414a695cdf0ec82a44dedb73ba3d5fa01705e"
+  integrity sha512-TBhllwg9YVaZ9EwraUUOcNcnEnsuxgiGMTeEv7QLhieh6Ddj2SDkcirVp7/lVemEQ8hNsuS2+3l+kXU6YIbHTQ==
   dependencies:
     "@apollo/client" "^3.6.9"
     "@fortawesome/fontawesome-free" "5.5.0"
     "@spinnaker/mocks" "1.0.7"
-    "@spinnaker/presentation" "^0.2.1"
+    "@spinnaker/presentation" "^0.3.0"
     "@spinnaker/styleguide" "2.0.0"
     "@uirouter/angularjs" "1.0.26"
     "@uirouter/core" "6.0.8"
@@ -1438,10 +1438,10 @@
   dependencies:
     formik "2.2.9"
 
-"@spinnaker/presentation@^0.2.1":
-  version "0.2.1"
-  resolved "https://armory.jfrog.io/artifactory/api/npm/npm-all/@spinnaker/presentation/-/presentation-0.2.1.tgz#7121828af109bf6bbb45033d14d2069c7079032b"
-  integrity sha512-zyTMJ6d5cXQm4s8SiZ3CFE9vCU8K8ECiZ9UT+HWbX7F8Q+ctXZbEhP6sGrQOBvu6f2CdwC359R1FZ0YBQpEcuA==
+"@spinnaker/presentation@^0.3.0":
+  version "0.3.1"
+  resolved "https://armory.jfrog.io/artifactory/api/npm/npm-all/@spinnaker/presentation/-/presentation-0.3.1.tgz#83c3fb0f08ffad4abf7fb2b1b4f450c750aa3410"
+  integrity sha512-GcRkt8L7PqqYzLUSfIpjhuGFY1QFlnJ9DV3pFJ75O5f1OWKITrHaTARtqAkebqRLz21BSra8RadwdAojgxmFjg==
   dependencies:
     formik "2.2.9"
 
