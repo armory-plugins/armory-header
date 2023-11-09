@@ -6,9 +6,8 @@ import {
   AuthenticationService,
   CollapsibleSectionStateCache,
   GlobalSearch,
-  HelpMenu,
   SETTINGS,
-  UserMenu,
+  UserMenu
 } from '@spinnaker/core';
 import { Icon } from '@spinnaker/presentation';
 
@@ -17,6 +16,7 @@ import { QuickSpinBanner } from '../QuickSpinBanner/QuickSpinBanner';
 import { addChurnZeroScript, initializeChurnZero } from '../../utils/ChurnZero';
 
 import './ArmoryHeader.css';
+import {HelpMenu} from "../help/HelpMenu";
 
 export const ArmoryHeader = () => {
   const { state: currentState } = useCurrentStateAndParams();
