@@ -15,7 +15,6 @@ import { Icon } from '@spinnaker/presentation';
 import { AtipoGlobalBanner } from '../AtipoBanner/AtipoGlobalBanner';
 import { BannerGroup } from '../Banner/BannerGroup';
 import { QuickSpinBanner } from '../QuickSpinBanner/QuickSpinBanner';
-import { addChurnZeroScript, initializeChurnZero } from '../../utils/ChurnZero';
 
 import './ArmoryHeader.css';
 
@@ -55,14 +54,6 @@ export const ArmoryHeader = () => {
       <a {...dinghyEventsSref}>Dinghy Events</a>
     </li>
   );
-
-  useEffect(() => {
-    addChurnZeroScript().then((response: any) => {
-      if (response.status === 'Success') {
-        initializeChurnZero(AuthenticationService.getAuthenticatedUser().name);
-      }
-    });
-  }, []);
 
   return (
     <Fragment>
